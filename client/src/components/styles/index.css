@@ -1,0 +1,50 @@
+/* FONT*/
+@font-face {
+    font-family: "Calibre";
+    src: url("../../assets/calibre-font/TestCalibre-Regular-BF661746edbee52.otf")
+    format("opentype")   
+}
+
+:root {
+    /* FONT SIZE */
+   --font-size-xl: 20px;
+   --font-size-l: 18px;
+   --font-size-m: 16px;
+   --font-size-s: 14px;
+   --font-size-xs: 12px;
+
+
+    /* HEADING SIZE */
+    --heading-size-h1: 56px;
+    --heading-size-h2: 42px;
+    --heading-size-h3: 32px;
+    --heading-size-h4: 24px;
+    --heading-size-h5: 18px;
+    --heading-size-h6: 16px;
+
+    /* COLOURS */
+    --grey: #353535;
+    --grey100: #e1e1e1;
+    --grey200: #c0c0c0;
+    --grey300: #787878;
+    --grey700: #262626;
+    --grey900: #353535;
+
+    --orange: #ed560e;
+    --orange100: #f9cbb4;
+    --orange300: #f38e5e;
+    --orange600: #d84e0d;
+    --orange700: #b0400a;
+    --orange900: #642406;
+
+    --purple: #272270;
+    --purple300: #3931af;
+    --purple700: #1c194c;
+
+    --yellow: #ffa000;
+}
+
+
+
+
+
