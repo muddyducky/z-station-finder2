@@ -3,8 +3,8 @@ import styles from "./Navbar.module.css";
 export default function Navbar() {
   return (
     <div className={styles.navPage}>
-      <div className={styles.leftContainer}>
-        <ul>
+
+        <ul className={styles.leftContainer}>
           <li>
             <img src="icons/logo/Logo.png" alt="Z-logo" />
           </li>
@@ -15,9 +15,8 @@ export default function Navbar() {
             <p>For business</p>
           </li>
         </ul>
-      </div>
-      <div className={styles.rightContainer}>
-        <ul>
+      
+        <ul className={styles.rightContainer}>
           <li><p>Z App</p></li>
           <li><p>About Z</p></li>
           <li>
@@ -27,7 +26,6 @@ export default function Navbar() {
             <img src="/icons/buttons/Login.png" alt="login-button" />
           </li>
         </ul>
-      </div>
     </div>
   );
 }

@@ -6,30 +6,32 @@
 }
 
 .navPage {
-    padding: 20px 167px;
-    height: 8vh;
+    padding: 10px 167px;
+    height: 11vh;
     width: 100vw;
     display: flex;
+    border-bottom: 1px solid var(--grey100);
 }
 
 li {
     cursor: pointer;
 }
 
-.leftContainer ul, .rightContainer > ul {
+.leftContainer, .rightContainer {
     display: flex;
-    gap: 3vw;   
+    gap: 2vw;   
 }
 
-.rightContainer ul li p, 
-.leftContainer ul li p {
-    padding: 10px;
+.rightContainer li p, 
+.leftContainer li p {
     font-size: var(--font-size-xl);
     font-weight: 700;  
 }
 
-.rightContainer ul {
-    padding-left: 35vw;
+.rightContainer {
+    margin-left: auto;
+    
+    
 }
 
 .searchIcon {
