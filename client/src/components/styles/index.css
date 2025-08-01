@@ -2,7 +2,9 @@
 @font-face {
     font-family: "Calibre";
     src: url("../../assets/calibre-font/TestCalibre-Regular-BF661746edbee52.otf")
-    format("opentype")   
+    format("opentype");
+    font-weight: 700;
+    font-style: normal; 
 }
 
 :root {

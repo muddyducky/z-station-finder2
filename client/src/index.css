@@ -1,17 +1,16 @@
 /* FONT*/
 @font-face {
-  font-family: 'TestCalibre';
-  src: url('/assets/calibre-font/TestCalibre-Regular-BF661746edbee52.woff') format('woff');
-  font-weight: normal;
+  font-family: 'Calibre';
+  src: url('./assets/font/calibre-font-family-1754003808-0/TestCalibre-Regular-BF661746edbee52.otf') format('opentype');
+  font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
-
-
 
 :root {
     
     /* PRIMARY FONT */
-    --primary-font: "TestCalibre";
+    --primary-font: "Calibre";
 
     /* FONT SIZE */
    --font-size-xl: 20px;
