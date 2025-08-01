@@ -1,11 +1,18 @@
 /* FONT*/
 @font-face {
-    font-family: "Calibre";
-    src: url("../../assets/calibre-font/TestCalibre-Regular-BF661746edbee52.otf")
-    format("opentype")   
+  font-family: 'TestCalibre';
+  src: url('/assets/calibre-font/TestCalibre-Regular-BF661746edbee52.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
+
+
 :root {
+    
+    /* PRIMARY FONT */
+    --primary-font: "TestCalibre";
+
     /* FONT SIZE */
    --font-size-xl: 20px;
    --font-size-l: 18px;
@@ -43,6 +50,11 @@
 
     --yellow: #ffa000;
 }
+
+body {
+  font-family: var(--primary-font);
+}
+
 
 
 
