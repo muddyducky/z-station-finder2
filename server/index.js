@@ -3,6 +3,7 @@ import morgan from 'morgan';
 import dotenv from 'dotenv';
 import { connectDB } from './config/connectDatabase.js';
 import testRoute from './routes/testRoute.js'; 
+import stationRoutes from './routes/stationRoutes.js'
 //___ config ___
 dotenv.config();
 const app = express();
@@ -17,6 +18,9 @@ connectDB();
 
 //___ API routes ___
 app.use('/api', testRoute);
+
+//___ Route to fetch station data ___
+app.use('/api', stationRoutes)
 
 //___ Server connection ___
 app.listen(PORT, () => {
