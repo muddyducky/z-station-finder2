@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* might need to remove this padding if it affects the navbar position */
+.screen2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+.screen2::-webkit-scrollbar {
+    display: none;
+}

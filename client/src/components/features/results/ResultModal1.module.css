@@ -1,0 +1,44 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.resultModal {
+  height: 567px;
+  width: 435px;
+  background-color: var(--white);
+  border-radius: 40px;
+  border: 1px solid var(--grey200);
+  overflow-y: scroll;
+  padding: 30px;
+}
+
+.icons {
+  position: relative;
+  left: 10px;
+  display: flex;
+  height: 16px;
+  width: 16px;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.closeIcon {
+    position: absolute;
+    left: 350px;
+    height: 16px;
+    width: 16px;
+    background-color: var(--grey100);
+    border-radius: 50%;
+}
+
+.resultModal::-webkit-scrollbar {
+ display: none;
+}
+
+.resultModal p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
