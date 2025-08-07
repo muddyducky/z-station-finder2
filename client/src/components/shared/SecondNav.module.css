@@ -5,17 +5,16 @@
     list-style: none;
 }
 .secondNavPage {
-    padding: 0px 167px;
-    height: 7vh;
+    padding: 0px 150px;
+    height: 5vh;
     width: 100vw;
     border-bottom: 1px solid var(--grey100);
 
 }
 
-p {
-    padding: 8px;
+.listContainer {
     font-size: var(--font-size-xl);
-    font-weight: 700;
+    font-weight: 700;  
     cursor: pointer;
 }
 
@@ -25,7 +24,10 @@ p {
 }
 
 .listContainer {
-    padding: 5px;
+    padding-top: 15px;
+    position: relative;
     display: flex;
     gap: 2vw;
+    bottom: 20px;
 }
+

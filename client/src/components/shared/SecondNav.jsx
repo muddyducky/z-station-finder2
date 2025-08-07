@@ -5,28 +5,28 @@ export default function SecondNav() {
     <div className={styles.secondNavPage}>
       <ul className={styles.listContainer}>
         <li>
-          <p>
+          <span>
             At the station
             <img src="/icons/misc/DropdownBold.png" alt="dropdown-arrow" />
-          </p>
+          </span>
         </li>
         <li>
-          <p>
+          <span>
             Power
             <img src="/icons/misc/DropdownBold.png" alt="dropdown-arrow" />
-          </p>
+          </span>
         </li>
         <li>
-          <p>
+          <span>
             Rewards and Promotions
             <img src="/icons/misc/DropdownBold.png" alt="dropdown-arrow" />
-          </p>
+          </span>
         </li>
         <li>
-          <p>
+          <span>
             Locations
             <img src="/icons/misc/DropdownBold.png" alt="dropdown-arrow" />
-          </p>
+          </span>
         </li>
       </ul>
     </div>
