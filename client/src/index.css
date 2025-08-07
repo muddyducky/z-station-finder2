@@ -7,6 +7,14 @@
   font-display: swap;
 }
 
+@font-face {
+    font-family: "Calibre";
+    src: url('./assets/font/calibre-font-family-1754003808-0/TestCalibre-Semibold-BF661746ed9242e.otf') format('opentype');
+    font-weight: 900;
+    font-style: bold;
+    font-display: swap;
+}
+
 :root {
     
     /* PRIMARY FONT */
@@ -29,6 +37,8 @@
     --heading-size-h6: 16px;
 
     /* COLOURS */
+    --white: #FFFFFF;
+
     --grey: #353535;
     --grey100: #e1e1e1;
     --grey200: #c0c0c0;

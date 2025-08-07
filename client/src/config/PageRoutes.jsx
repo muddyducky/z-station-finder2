@@ -7,9 +7,9 @@ export default function PageRoutes() {
   return (
     <div>
       <Routes>
-        <Route path='/' element={Screen1}/>
-        <Route path='/search' element={Screen2}/>
-        <Route path='result' element={Screen3}/>
+        <Route path='/' element={<Screen1/>}/>
+        <Route path='/search' element={<Screen2/>}/>
+        <Route path='result' element={<Screen3/>}/>
       </Routes>
     </div>
   )

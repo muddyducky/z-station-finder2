@@ -1,26 +1,30 @@
-import express from 'express';
-import morgan from 'morgan';
-import dotenv from 'dotenv';
-import { connectDB } from './config/connectDatabase.js';
-import testRoute from './routes/testRoute.js'; 
-import stationRoutes from './routes/stationRoutes.js'
+import express from "express";
+import morgan from "morgan";
+import dotenv from "dotenv";
+import { connectDB } from "./config/connectDatabase.js";
+import testRoute from "./routes/testRoute.js";
+import stationRoutes from "./routes/stationRoutes.js";
+import searchStationInfo from "./controllers/searchStationInfo.js";
 //___ config ___
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 4000;
 
 //__ middleware config ___
-app.use(morgan('dev')); 
+app.use(morgan("dev"));
 app.use(express.json());
 
 //___ database connection ___
 connectDB();
 
 //___ API routes ___
-app.use('/api', testRoute);
+app.use("/api", testRoute);
 
 //___ Route to fetch station data ___
-app.use('/api', stationRoutes)
+app.use("/api", stationRoutes);
+
+//___ Route to filter search results ___
+app.use("/api", searchStationInfo);
 
 //___ Server connection ___
 app.listen(PORT, () => {
