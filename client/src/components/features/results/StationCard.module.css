@@ -1,0 +1,70 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+p {
+    font-size: var(--font-size-s);
+    font-weight: 400;
+}
+
+h3 {
+    color: var(--purple);
+    font-size: var(--heading-size-h3);
+    font-weight: 900;
+    padding-left: 7px;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+.stationCard {
+    height: 230px;
+    width: 353px;
+    border-bottom: 2px solid var(--grey200);
+    background-color: var(--white);
+    
+    cursor: pointer;
+}
+
+.stationName {
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.stationName p {
+    flex-shrink: 0;
+    white-space: nowrap;
+    position: static;
+    top: 10px;
+    left: 320px;
+}
+.region {
+    padding: 10px;
+}
+.region img {
+    padding-right: 8px;
+}
+
+.rotate {
+ transform: rotate(180deg);
+}
+
+.openHours p {
+    padding: 7px ;
+}
+
+.getDirections {
+    display: flex;
+    position: relative;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.forwardArrow {
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    left: 320px;
+}
