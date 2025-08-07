@@ -1,0 +1,27 @@
+.resultModal {
+  height: 567px;
+  width: 435px;
+  background-color: var(--white);
+  border-radius: 40px;
+  border: 1px solid var(--grey200);
+  overflow-y: scroll;
+  padding: 30px;
+}
+.resultModal::-webkit-scrollbar {
+ display: none;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 5px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.closeIcon {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--grey100);
+    border-radius: 50%;
+}
