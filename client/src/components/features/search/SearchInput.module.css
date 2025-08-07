@@ -3,3 +3,35 @@
     padding: 0;
     box-sizing: border-box;
 }
+.searchInput {
+    display: flex;
+}
+
+input {   
+    position: relative; 
+    width: 298px;
+    height: 39px;
+    border-radius: 30px;
+    padding: 10px 10px; 
+    background-color: var(--white);  
+    border: none; 
+    font-size: var(--font-size-s);
+}
+
+input:focus {
+  outline: none;
+  border: none; 
+}
+
+.closeIcon {
+    position: relative;
+    left: 265px;
+    bottom: 29px;
+    cursor: pointer;
+}
+
+.showResult {
+    position: absolute;
+    top: 340px;
+    padding-bottom: 10px;
+}

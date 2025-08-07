@@ -3,3 +3,24 @@
     padding: 0;
     box-sizing: border-box;
 }
+h1 {
+    padding-bottom: 10px;
+    font-family: "Calibre";
+    color: var(--white);
+    font-weight: bolder;
+    font-style: normal;
+    font-display: swap;
+    text-align: center;
+}
+
+.searchPage {
+    width: 456px;
+    height: 211px;
+    background: linear-gradient(to right, var(--orange), var(--yellow));
+    padding: 30px 50px;
+    border-radius: 40px;
+}
+
+.searchInput {
+   padding: 10px 24px;
+}
