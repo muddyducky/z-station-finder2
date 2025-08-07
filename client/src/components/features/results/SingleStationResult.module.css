@@ -1,0 +1,39 @@
+.stationResult {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.stationName {
+    position: relative;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.stationName p {
+    position: absolute;
+    top: 10px;
+    left: 340px;
+}
+.region {
+    padding-bottom: 10px;
+}
+
+.services{
+    position: absolute;
+    left: 10px;
+}
+.getDirections {
+    width: 173px;
+    height: 36px;
+    cursor: pointer;
+}
+.phoneNum {
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.phoneNum p {
+    text-decoration: underline;
+}

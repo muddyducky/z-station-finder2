@@ -1,0 +1,37 @@
+.operatingHoursContainer {
+
+}
+
+.dropdown {
+  font-size: 1.2rem;
+  padding-left: 5px;
+  z-index: 10;
+   cursor: pointer;
+   transition: transform 0.3s ease-in-out;
+}
+
+.open {
+    transform: rotate(180);
+}
+
+.hoursList {
+  overflow: hidden;
+  max-height: 500px;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.hoursList.closed {
+    max-height: 0;
+}
+
+.hourItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+}
+
+.day {
+  width: 60px;
+}
+
+
