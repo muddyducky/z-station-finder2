@@ -16,6 +16,7 @@ export function UseSearchStations() {
       const results = response.data.map((station) => ({
         id: station._id,
         name: station.station_name,
+        phone: station.phone,
         location: {
           address: station.location?.address,
           city: station.location?.city,
@@ -29,9 +30,9 @@ export function UseSearchStations() {
             }))
           : [],
         coordinates: {
-          lat: station.coordinates?.latitude ?? null,
-          long: station.coordinates?.longitude ?? null
-        },
+          latitude: station.coordinates?.latitude ?? null,
+          longitude: station.coordinates?.longitude ?? null
+        },        
         services: Array.isArray(station.services)
           ? station.services.map((service) => ({
                 _id: service._id,
