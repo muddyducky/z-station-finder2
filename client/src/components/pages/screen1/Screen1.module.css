@@ -5,11 +5,37 @@
 }
 
 .screen1Page {
+  position: relative;
   display: flex;
   flex-direction: column; 
   align-items: start;    
-  min-height: 100vh;      
-  padding: 20px;          
-  gap: 30px;  
+  min-height: 100vh;   
+  padding-top: 20px;  
 }
+.navs {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  height: 20vh;
+  width: 100vw;
+}
+
+.mapContainer {
+  position: relative;
+  height: 87vh;
+  width: 100%;
+}
+
+.searchOverlay {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: absolute;
+  top: 5rem;
+  left: 3rem;
+  z-index: 10;
+}
+
+
+
 
