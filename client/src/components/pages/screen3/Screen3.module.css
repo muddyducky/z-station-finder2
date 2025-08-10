@@ -5,13 +5,42 @@
 }
 
 .screen3 {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 10px;
-    overflow-y: scroll;
+  display: flex;
+  flex-direction: column; 
+  align-items: start;    
+  min-height: 100vh;   
+  padding-top: 20px; 
+  overflow-y: auto;
 }
 
 .screen3::-webkit-scrollbar {
     display: none;
+}
+
+.navs {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  height: 20vh;
+  width: 100vw;
+}
+
+.mapContainer {
+  position: relative;
+  height: 87vh;
+  width: 100%;
+}
+.resultModal {
+    position: relative;
+}
+
+
+.searchOverlay {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 5rem;
+  left: 3rem;
+  z-index: 10;
+  padding: 20px;
 }
