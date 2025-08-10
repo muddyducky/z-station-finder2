@@ -1,18 +1,24 @@
 import { useState } from 'react';
 import axios from 'axios';
 
-export function UseSearchStations() {
-  const [searchResults, setSearchResults] = useState([]);
-  const [loading, setLoading] = useState(false);
 
+
+export function UseSearchStations() {
+  //__ Set the state to get search results and loading state 
+  const [searchResults, setSearchResults] = useState([]);
+  const [loading, setLoading] = useState(false)
+
+  //__ Function to search stations by keyword
   const searchStations = async ({ keyword }) => {
     setLoading(true);
 
+    //__ Make an API call to fetch stations matching the keyword
     try {
       const response = await axios.get('/api/search', {
         params: { keyword }
       });
 
+      //___ Format the search results
       const results = response.data.map((station) => ({
         id: station._id,
         name: station.station_name,
@@ -49,7 +55,7 @@ export function UseSearchStations() {
               }))
               : [],
       }));
-
+      //__ Update the search results state
       setSearchResults(results);
     } catch (err) {
       console.error('Failed to search stations:', err);
@@ -58,7 +64,7 @@ export function UseSearchStations() {
       setLoading(false);
     }
   };
-
+  //__ Return the search function and results
   return { searchStations, searchResults, loading };
 }
 
