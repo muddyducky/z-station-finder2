@@ -2,6 +2,7 @@ import styles from './SingleStationResult.module.css'
 import Services from './Services'
 import OperatingHours from './OperatingHours'
 
+//___ Component that displays a single station with dynamic content
 export default function SingleStationResult( { station }) {
     if (!station) {
     return null;
@@ -27,7 +28,7 @@ export default function SingleStationResult( { station }) {
         <img src="/icons/buttons/GetDirections.png" alt="get-directions button" className={styles.getDirections} />
         <div className={styles.phoneNum}>
             <img src="/icons/misc/PhoneBold.png" alt="phone-icon" className={styles.phone} /> 
-            <p> 0800 Z ENERGY</p>
+            <p>{station.phone}</p>
         </div>
     </div>
   )
