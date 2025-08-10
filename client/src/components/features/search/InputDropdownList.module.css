@@ -6,6 +6,9 @@
     list-style: none;
 }
 .results {
+    position: absolute;
+    bottom: 5rem;
+    z-index: 1000;
     width: 298px;
     height: 213px;
     border-radius: 16px;
@@ -15,22 +18,10 @@
     overflow-y: scroll;
     font-size: var(--font-size-s);
     font-weight: 400;
-    
 }
 
 .results::-webkit-scrollbar {
-    width: 6px;
-}
-
-.results::-webkit-scrollbar-track {
-    background: transparent;
-    border-radius: 16px;
-}
-
-.results::-webkit-scrollbar-thumb {
-    background-color: var(--grey200 );
-    border-radius: 16px;
-    border: 1px solid var(--white);
+   display: none;
 }
 
 .resultItem {

@@ -1,12 +1,12 @@
 import styles from './Search.module.css'
 import SearchInput from './SearchInput.jsx'
 
+//___ Search component that renders the search input and its functionality
 export default function Search({ onFilter, placeholder, className, keyword}) {
   return (
     <div className={`${styles.searchPage} ${className}`}>
       <h1>Search Z Stations</h1>
       <div className={styles.searchInput}>
-
         <SearchInput
           onFilter={onFilter}
           placeholder={placeholder || "Search by location, service, fuel"}

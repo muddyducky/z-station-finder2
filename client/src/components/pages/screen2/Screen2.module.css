@@ -4,15 +4,37 @@
     box-sizing: border-box;
 }
 
-/* might need to remove this padding if it affects the navbar position */
 .screen2 {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 10px;
-    overflow-y: scroll;
+  display: flex;
+  flex-direction: column; 
+  align-items: start;    
+  min-height: 100vh;   
+  padding-top: 20px; 
 }
 
 .screen2::-webkit-scrollbar {
     display: none;
+}
+.navs {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  height: 20vh;
+  width: 100vw;
+}
+
+.mapContainer {
+  position: relative;
+  height: 87vh;
+  width: 100%;
+}
+.searchOverlay {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  z-index: 10;
+  padding: 20px;
 }

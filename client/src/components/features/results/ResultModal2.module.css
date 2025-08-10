@@ -1,6 +1,8 @@
 .resultModal {
+  position: absolute;
+  top: 15rem;
   height: 567px;
-  width: 435px;
+  width: 456px;
   background-color: var(--white);
   border-radius: 40px;
   border: 1px solid var(--grey200);

@@ -22,5 +22,6 @@ h1 {
 }
 
 .searchInput {
+   position: relative;
    padding: 10px 24px;
 }

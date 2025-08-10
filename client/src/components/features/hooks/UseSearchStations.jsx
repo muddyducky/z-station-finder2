@@ -1,21 +1,28 @@
 import { useState } from 'react';
 import axios from 'axios';
 
-export function UseSearchStations() {
-  const [searchResults, setSearchResults] = useState([]);
-  const [loading, setLoading] = useState(false);
 
+
+export function UseSearchStations() {
+  //__ Set the state to get search results and loading state 
+  const [searchResults, setSearchResults] = useState([]);
+  const [loading, setLoading] = useState(false)
+
+  //__ Function to search stations by keyword
   const searchStations = async ({ keyword }) => {
     setLoading(true);
 
+    //__ Make an API call to fetch stations matching the keyword
     try {
       const response = await axios.get('/api/search', {
         params: { keyword }
       });
 
+      //___ Format the search results
       const results = response.data.map((station) => ({
         id: station._id,
         name: station.station_name,
+        phone: station.phone,
         location: {
           address: station.location?.address,
           city: station.location?.city,
@@ -29,9 +36,9 @@ export function UseSearchStations() {
             }))
           : [],
         coordinates: {
-          lat: station.coordinates?.latitude ?? null,
-          long: station.coordinates?.longitude ?? null
-        },
+          latitude: station.coordinates?.latitude ?? null,
+          longitude: station.coordinates?.longitude ?? null
+        },        
         services: Array.isArray(station.services)
           ? station.services.map((service) => ({
                 _id: service._id,
@@ -48,7 +55,7 @@ export function UseSearchStations() {
               }))
               : [],
       }));
-
+      //__ Update the search results state
       setSearchResults(results);
     } catch (err) {
       console.error('Failed to search stations:', err);
@@ -57,7 +64,7 @@ export function UseSearchStations() {
       setLoading(false);
     }
   };
-
+  //__ Return the search function and results
   return { searchStations, searchResults, loading };
 }
 

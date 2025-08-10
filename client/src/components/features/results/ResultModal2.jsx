@@ -1,5 +1,9 @@
 import styles from './ResultModal2.module.css'
+
+//___ SingleStationResult component that displays a single station
 import SingleStationResult from './SingleStationResult'
+
+//___ useNavigate for navigation between UI routes
 import { useNavigate } from 'react-router-dom'
 
 export default function ResultModal2({ stations, onClose }) {
@@ -9,6 +13,7 @@ export default function ResultModal2({ stations, onClose }) {
         return <p>No stations available...</p>
     }
 
+    //___ Function to handle back button click
     const handleBackClick = () => {
         navigate(-1)
     }
@@ -28,6 +33,8 @@ export default function ResultModal2({ stations, onClose }) {
                 onClick={onClose}
             />
         </div>
+        
+        {/* Render a SingleStationResult for each station */}
         {stations.map((station) => (
             <SingleStationResult
                 key={station.id}
