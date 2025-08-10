@@ -14,6 +14,7 @@ const searchStationInfo = async (req, res) => {
             station_name: 1,
             id: 1,
             _id: 1,
+            phone:1,
             location: 1,
             coordinates: 1,
             fuel: 1,
