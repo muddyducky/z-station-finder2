@@ -1,0 +1,22 @@
+.searchByPrice {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.priceImg {
+    position: absolute;
+    transition: opacity 0.3s;
+}
+.show {
+  opacity: 1;
+  z-index: 2;
+  pointer-events: auto;
+}
+
+.hide {
+  opacity: 0;
+  z-index: 1;
+}
