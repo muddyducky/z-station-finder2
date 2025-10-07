@@ -2,7 +2,7 @@ import { useState } from "react";
 //___ Import to use the GoogleMap component
 import { GoogleMap } from "@react-google-maps/api";
 import { useMapLoader } from "./MapLoader.jsx";
-import { useMapMarkers } from "./useMapMarkers.js";
+import  useMapMarkers  from "./useMapMarkers.js";
 
 //__ Set map container style
 const containerStyle = {
@@ -37,6 +37,7 @@ export default function Map({
 
   if (loadError) return <div>Error loading maps</div>;
   if (!isLoaded) return <div>Loading Map...</div>;
+
 
   return (
     <div className={className}>
