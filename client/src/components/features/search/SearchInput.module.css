@@ -7,6 +7,9 @@
     display: flex;
 }
 
+.inputContainer {
+    position: relative;
+}
 input {   
     position: relative; 
     width: 298px;
@@ -24,9 +27,9 @@ input:focus {
 }
 
 .closeIcon {
-    position: relative;
+    position: absolute;
     left: 265px;
-    bottom: 29px;
+    bottom: 15px;
     cursor: pointer;
 }
 

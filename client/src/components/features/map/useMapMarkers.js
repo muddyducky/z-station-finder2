@@ -1,9 +1,10 @@
 import { useEffect, useRef } from "react";
 import { MarkerClusterer } from "@googlemaps/markerclusterer";
+import createPriceMarkerIcon from "./createPriceMarkerIcon.js";
 
 //__ Custom hook to manage map markers
 //... props: the map instance, stations data, clustering option, and click handlers
-export function useMapMarkers(
+export default function useMapMarkers(
   map,
   stations,
   cluster,
@@ -31,8 +32,8 @@ export function useMapMarkers(
       station: '/icons/map/zMapMarker.png',
       regionOrange: '/icons/map/AreaPinOrange.png',
       regionDark: '/icons/map/AreaPinDark.png',
-      priceMarker: '/icons/map/PriceMarker.png',
-      priceMarkerDark: '/icons/map/PriceMarkerDark.png',
+      priceMarker: '/icons/map/PriceMarkerLight.png',
+      priceMarkerDark: '/icons/map/PriceMarkerDark1.png',
     };
 
     //___ Get the current icon path

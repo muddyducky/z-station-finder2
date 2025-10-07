@@ -18,11 +18,10 @@ h3 {
     flex-basis: 0;
 }
 .stationCard {
-    height: 230px;
+    height: 200px;
     width: 353px;
     border-bottom: 2px solid var(--grey200);
     background-color: var(--white);
-    
     cursor: pointer;
 }
 

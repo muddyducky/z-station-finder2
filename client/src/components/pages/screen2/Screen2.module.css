@@ -5,11 +5,12 @@
 }
 
 .screen2 {
+  position: relative;
   display: flex;
   flex-direction: column; 
   align-items: start;    
   min-height: 100vh;   
-  padding-top: 20px; 
+  padding-top: 10px; 
 }
 
 .screen2::-webkit-scrollbar {
@@ -19,7 +20,7 @@
   display: flex;
   flex-direction: column;
   gap: 3vh;
-  height: 20vh;
+  height: 15vh;
   width: 100vw;
 }
 
@@ -31,7 +32,7 @@
 .searchOverlay {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: .5rem;
   position: absolute;
   top: 3rem;
   left: 3rem;

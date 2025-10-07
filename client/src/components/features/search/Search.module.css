@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 h1 {
-    padding-bottom: 10px;
     font-family: "Calibre";
     color: var(--white);
     font-weight: bolder;
@@ -14,14 +13,30 @@ h1 {
 }
 
 .searchPage {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     width: 456px;
     height: 211px;
     background: linear-gradient(to right, var(--orange), var(--yellow));
-    padding: 30px 50px;
+    padding: 20px 50px;
     border-radius: 40px;
 }
 
-.searchInput {
+.searchInput{
    position: relative;
-   padding: 10px 24px;
+   display: flex;
+   flex-direction: column;
+   left: 1rem;
+   gap: 10px;
+
+}
+
+.searchPage span {
+    display: flex;
+    position: relative;
+    left: 1rem;
+    font-size: var(--font-size-s);
+    font-weight: 400;
+    gap: 10px;
 }
