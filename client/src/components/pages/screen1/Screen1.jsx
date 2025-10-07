@@ -6,10 +6,11 @@ import Map from "../../features/map/Map.jsx";
 import { regionCoordinates } from "../../features/map/regionCoordinates.js";
 import { UseSearchStations } from "../../features/hooks/UseSearchStations.jsx";
 import { useNavigate } from "react-router-dom";
-import { useRef, useEffect} from "react";
+import { useRef, useEffect, useState } from "react";
 
 //___ Screen1 component that renders the search and map components
 export default function Screen1() {
+  const [toggleShowPriceBtn, setToggleShowPriceBtn] = useState(false);
   const navigate = useNavigate();
 
   //___ Map center coordinates
@@ -33,7 +34,7 @@ export default function Screen1() {
     };
   });
 
-  //___ Function to handle region marker clicks
+  //___ Function to handle the maps region marker clicks
   const handleRegionClick = async (regionMarker) => {
     lastRegion.current = regionMarker.name;
     await searchStations({ keyword: regionMarker.name });
@@ -52,7 +53,7 @@ export default function Screen1() {
   }, 100 );
   };
 
-  //___ Function to handle cluster clicks
+  //___ Function to handle cluster clicks in the map
   const handleClusterClick = async (cluster) => {
 
     //___ Get the markers from the cluster and extract their region names
@@ -82,7 +83,6 @@ export default function Screen1() {
     }
   }, [searchResults, navigate]);
 
-
   //___ Render the screen1 component
   return (
     <div className={styles.screen1Page}>
@@ -91,7 +91,10 @@ export default function Screen1() {
         <SecondNav />
       </div>
       <div className={styles.mapContainer}>
-        <Search className={styles.searchOverlay} />
+        <Search
+          className={styles.searchOverlay}
+          onShowPriceClick={() => setToggleShowPriceBtn(!toggleShowPriceBtn)}
+        />
         <Map
           stations={regionStations}
           center={nationalMap}
@@ -99,7 +102,7 @@ export default function Screen1() {
           onMarkerClick={handleRegionClick}
           onClusterClick={handleClusterClick}
           cluster={true}
-          markerType="regionOrange"
+          markerType={toggleShowPriceBtn ? "regionDark" : "regionOrange"}
         />
       </div>
     </div>
